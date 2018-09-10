@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+   <!-- <typeAliases>
+        <typeAlias alias="IntegerArrayTypeHandler" type="com.gov.mz.core.plugins.typeHandler.IntegerArrayTypeHandler" />
+        <typeAlias alias="BigIntArrayTypeHandler" type="com.gov.mz.core.plugins.typeHandler.BigIntArrayTypeHandler" />
+        <typeAlias alias="SmallIntArrayTypeHandler" type="com.gov.mz.core.plugins.typeHandler.SmallIntArrayTypeHandler" />
+        <typeAlias alias="TextArrayTypeHandler" type="com.gov.mz.core.plugins.typeHandler.TextArrayTypeHandler" />
+        <typeAlias alias="JSONTypeHandler" type="com.gov.mz.core.plugins.typeHandler.JSONTypeHandler" />
+        <typeAlias alias="ConditionTypeHandler" type="com.gov.mz.core.plugins.typeHandler.ConditionTypeHandler" />
+    </typeAliases>-->
+
+    <!--<typeHandlers>
+        <package name="com.gov.mz.core.plugins.typeHandler"/>
+    </typeHandlers>-->
+
+</configuration>

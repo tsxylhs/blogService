@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+    <!-- <classPathEntry location="ojdbc14.jar" /> -->
+
+    <context id="MysqlTables" targetRuntime="MyBatis3">
+
+        <commentGenerator>
+            <property name="suppressAllComments" value="true" />
+        </commentGenerator>
+
+        <jdbcConnection driverClass="org.postgresql.Driver"
+                        connectionURL="jdbc:postgresql://176.122.163.10:5412/postgres" userId="postgres"
+                        password="123456">
+        </jdbcConnection>
+
+        <javaModelGenerator targetPackage="com.blog.edu.core.entity"
+                            targetProject="core/src/main/java/">
+            <property name="enableSubPackages" value="true" />
+            <property name="trimStrings" value="false" />
+        </javaModelGenerator>
+
+        <sqlMapGenerator targetPackage="config.sqlmap"
+                         targetProject="core/src/main/resources">
+        </sqlMapGenerator>
+
+        <javaClientGenerator type="XMLMAPPER"
+                             targetPackage="com.blog.edu.core.mapper" targetProject="core/src/main/java">
+            <property name="enableSubPackages" value="true" />
+        </javaClientGenerator>
+
+        <!-- 数据库表 -->
+        <table tableName="user" enableSelectByExample="true"
+               enableDeleteByExample="true" enableCountByExample="true"
+               enableUpdateByExample="true">
+        </table>
+
+
+    </context>
+
+</generatorConfiguration>
