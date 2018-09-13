@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" monitorInterval="30">
+    <Properties>
+        <Property name="PID">????</Property>
+        <Property name="LOG_PATTERN">[box]%d %-5p [%c] %m%n</Property>
+    </Properties>
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT" follow="true">
+            <PatternLayout pattern="${LOG_PATTERN}"/>
+        </Console>
+        <!--<RollingFile name="FileAppender"-->
+                     <!--fileName="/var/log/mz-admin/web.log"-->
+                     <!--filePattern="/var/log/mz-admin/web.log.%d{yyyy-MM-dd}">-->
+            <!--<PatternLayout>-->
+                <!--<Pattern>[service]%d %-5p [%c %L] %m%n</Pattern>-->
+            <!--</PatternLayout>-->
+            <!--<Policies>-->
+                <!--<TimeBasedTriggeringPolicy/>&lt;!&ndash; Rotated everyday &ndash;&gt;-->
+                <!--<SizeBasedTriggeringPolicy size="100 MB"/> &lt;!&ndash; Or every 100 MB &ndash;&gt;-->
+            <!--</Policies>-->
+        <!--</RollingFile>-->
+    </Appenders>
+    <Loggers>
+        <Logger name="com.ibatis" level="debug"/>
+        <Logger name="com.blog" level="debug"/>
+        <Logger name="java.sql" level="debug"/>
+        <Logger name="org.springframework" level="info"/>
+        <Logger name="org.springframework.jms" level="error"/>
+        <Logger name="org.springframework.ws.client.MessageTracing" level="trace"/>
+        <Logger name="org.apache.activemq" level="error"/>
+        <Logger name="org.apache.zookeeper" level="info"/>
+        <Logger name="com.alibaba.dubbo" level="info"/>
+
+        <Root level="debug">
+            <AppenderRef ref="Console"/>
+            <!--<AppenderRef ref="FileAppender"/>-->
+        </Root>
+    </Loggers>
+</Configuration>
