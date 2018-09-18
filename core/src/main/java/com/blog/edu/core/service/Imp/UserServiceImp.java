@@ -19,4 +19,9 @@ public class UserServiceImp  implements UserService {
     public User get(Long id) {
         return userMapper.selectByPrimaryKey(id);
     }
+
+    @Override
+    public int update(User user) {
+        return userMapper.updateByPrimaryKeySelective(user);
+    }
 }

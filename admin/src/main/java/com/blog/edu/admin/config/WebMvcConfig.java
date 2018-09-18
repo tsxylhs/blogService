@@ -1,6 +1,8 @@
 package com.blog.edu.admin.config;
 
+import com.spring4all.swagger.EnableSwagger2Doc;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 

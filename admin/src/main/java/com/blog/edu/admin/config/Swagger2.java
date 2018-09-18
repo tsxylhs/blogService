@@ -2,6 +2,7 @@ package com.blog.edu.admin.config;
 
 import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import springfox.documentation.builders.ApiInfoBuilder;
 import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
@@ -16,7 +17,7 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
  * @Author lvhoushuai(tsxylhs @ outlook.com)
  * @Date 18-9-13
  **/
-@Configurable
+@Configuration
 @EnableSwagger2
 public class Swagger2 {
 

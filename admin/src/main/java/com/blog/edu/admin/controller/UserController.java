@@ -2,15 +2,13 @@ package com.blog.edu.admin.controller;
 
 import com.blog.edu.core.entity.User;
 import com.blog.edu.core.service.UserService;
+import com.edu.common.code.model.Result;
 import groovy.util.logging.Log4j2;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @ClassName UserController
@@ -27,7 +25,14 @@ public class UserController {
     @GetMapping("/{id}")
     @ApiOperation(value = "根据用户ｉｄ查询用户信息")
     @ApiImplicitParam(paramType = "query" ,name = "id" ,value="用户id",required = true,dataType = "long")
-    public User get(@PathVariable Long id){
-        return userService.get(id);
+    public Result get(@PathVariable Long id){
+        return Result.ok(userService.get(id));
+    }
+    @PutMapping("/")
+    @ApiOperation(value="根据用户信息更改用户的属性")
+    @ApiImplicitParam(paramType = "update",name="User",required = true,dataType = "user")
+    public Result Update(@RequestBody User user){
+
+        return Result.ok(userService.update(user));
     }
 }

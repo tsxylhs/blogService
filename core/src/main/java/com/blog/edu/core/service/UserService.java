@@ -9,4 +9,6 @@ import com.blog.edu.core.entity.User;
  **/
 public interface UserService {
      User get(Long id);
+     int update(User user);
 }
+
