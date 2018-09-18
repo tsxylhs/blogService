@@ -1,5 +1,3 @@
-// Copyright 2018 Baidu Inc. All rights reserved.
-
 package com.blog.edu.admin;
 
 
