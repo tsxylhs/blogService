@@ -3,6 +3,8 @@ package com.blog.edu.admin.controller;
 import com.blog.edu.core.entity.User;
 import com.blog.edu.core.service.UserService;
 import com.edu.common.code.model.Result;
+import com.edu.common.code.page.PageData;
+import com.edu.common.code.page.PageRequest;
 import groovy.util.logging.Log4j2;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -31,8 +33,15 @@ public class UserController {
     @PutMapping("/")
     @ApiOperation(value="根据用户信息更改用户的属性")
     @ApiImplicitParam(paramType = "update",name="User",required = true,dataType = "user")
-    public Result Update(@RequestBody User user){
+    public Result update(@RequestBody User user){
 
         return Result.ok(userService.update(user));
     }
+    @PostMapping("/list")
+    @ApiOperation(value="查询用户的列表")
+    public Result userList(@RequestBody PageRequest pageRequest) {
+      return userService.list(pageRequest);
+    }
+
+
 }
