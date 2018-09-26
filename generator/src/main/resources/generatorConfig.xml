@@ -33,7 +33,7 @@
         </javaClientGenerator>
 
         <!-- 数据库表 -->
-        <table tableName="user" enableSelectByExample="true"
+        <table tableName="article" enableSelectByExample="true"
                enableDeleteByExample="true" enableCountByExample="true"
                enableUpdateByExample="true">
         </table>
