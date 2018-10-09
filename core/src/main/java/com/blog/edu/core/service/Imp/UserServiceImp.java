@@ -42,7 +42,6 @@ public class UserServiceImp  implements UserService {
         UserExample ex=new UserExample();
         UserExample.Criteria  c= ex.createCriteria();
         List<User> users=userMapper.selectByExample(ex);
-        log.info("asdf");
         return Result.ok(
                 new PageData(new PageInfo<>(users).getTotal(), pageRequest.getPage(), pageRequest.getPageSize()),
                 users);
