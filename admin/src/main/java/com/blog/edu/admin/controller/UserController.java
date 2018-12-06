@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("user")
 @Api(value = "用于用户的curd")
 public class UserController {
-@Autowired
+    @Autowired
     UserService userService;
     @GetMapping("/{id}")
     @ApiOperation(value = "根据用户ｉｄ查询用户信息")
